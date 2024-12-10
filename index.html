@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./img/logo_2.png" type="image/x-icon">
+    <title>PixelPoint.com | Tienda de productos digitales</title>
+</head>
+
+<body>
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                </div>
+                <div class="btn-menu">
+                    <label for="btn-menu">☰</label>
+                    <h4>MENU</h4>
+                </div>
+            </div>
+            <!--	--------------->
+            <input type="checkbox" id="btn-menu" />
+            <div class="container-menu">
+                <div class="cont-menu">
+                    <nav>
+                        <a href="cv.html">Curriculum</a>
+                        <a href="nosotros.html">Sobre nosotros</a>
+                        <a href="https://www.facebook.com/cifpcarlos3/?locale=pt_BR&_rdr">Facebook</a>
+                        <a href="https://www.youtube.com/@cifpcarlostercero">Youtube</a>
+                        <a href="https://www.instagram.com/alvarooogrc/profilecard/?igsh=YjhubmM3cDd5OWxz">Instagram</a>
+                    </nav>
+                    <label for="btn-menu"><img src="./img/exit.png" alt="exit" class="icon-exit"></label>
+                </div>
+            </div>
+
+            <div class="buscador">
+                <div class="categorias">
+                    <label for="categorias"></label>
+                    <select name="categorias" id="categorias" defaultValue="categorias">
+                        <option value="categorias">Categorias</option>
+                        <option href="#ofertas">Ofertas Flash</option>
+                        <option value="componentes">Componentes</option>
+                        <option value="perifericos">Periféricos</option>
+                        <option value="imagen_sonido">Imagen y Sonido</option>
+                        <option value="hogar">Hogar</option>
+                    </select>
+                </div>
+                <div class="buscar">
+                    <input type="text" placeholder="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="iconos">
+                <div class="perfil">
+                    <a href="./img/profileDefault.png" class="icon">
+                        <img src="./img/profileDefault.png" alt="Perfil" class="icon-img">
+                    </a>
+                    <p>Perfil</p>
+                </div>
+                <div class="carrito">
+                    <a href="mailto:info@museoarcadevintage.com" class="icon">
+                        <img src="./img/carrito.png" alt="carritoCompra" class="icon-img">
+                    </a>
+                    <p>Carrito</p>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- OFERTAS -->
+    <div id="inicio" class="promo">
+        <p style="font-weight: bold;">Expertos en tecnología</p>
+        <p>con un servicio 5 estrellas.</p>
+    </div>
+    <div class="ofertas">
+        <div class="foto">
+            <img src="./img/blackFriday.png" alt="anuncionBlackFriday">
+        </div>
+        <div class="grupoBloques">
+            <div id="azul" class="bloque2">
+                <img href="#ofertas" src="./img/logoFlash.png" alt="logoOfertaFlash">
+                <h4>Ofertas Flash</h4>
+            </div>
+            <div class="bloque2">
+                <img src="./img/componentes.png" alt="componentes">
+                <h4>Componentes</h4>
+            </div>
+            <div class="bloque2">
+                <img src="./img/perifericos.png" alt="perifericos">
+                <h4>Periféricos</h4>
+            </div>
+            <div class="bloque2">
+                <img src="./img/sonido.png" alt="imagenSonido">
+                <h4>Imagen y Sonido</h4>
+            </div>
+            <div class="bloque2">
+                <img src="./img/hogar.png" alt="hogar">
+                <h4>Hogar</h4>
+            </div>
+            <div class="bloque2">
+                <img src="./img/pendrive.png" alt="accesorios">
+                <h4>Accesorios</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- INICIO -->
+    <div class="inicio">
+        <div class="enunciado">
+            <h4>Ofertas Flash para chuparse los dedos!</h4>
+        </div>
+        <section class="productos1">
+            <div class="producto">
+                <div class="descuento">
+                    <p>-15%</p>
+                </div>
+                <img id="ofertas" src="./img/gpuASUS.png" alt="">
+                <div class="descripcion">
+                    <p>ASUS Dual GeForce RTX 4060 EVO OC Edition 8GB GDDR6 DLSS3</p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">304,99€</p>
+                    <p class="precioAntes">349€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,7/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">369 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 2 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="descuento">
+                    <p>-18%</p>
+                </div>
+                <img src="./img/portatilHP.png" alt="">
+                <div class="descripcion">
+                    <p>HP 15-FD0079NS Intel Core i5-1334U/16GB/1TB SSD/15.6" </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">489,00€</p>
+                    <p class="precioAntes">599,00€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,6/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">740 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 2 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="descuento">
+                    <p>-23%</p>
+                </div>
+                <img src="./img/retonLogitech.png" alt="">
+                <div class="descripcion">
+                    <p>Logitech G502 Lightspeed Ratón Gaming Inalámbrico 25600DPI </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">121,99€</p>
+                    <p class="precioAntes">159,99€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,8/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">984 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 1 día.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="descuento">
+                    <p>-69%</p>
+                </div>
+                <img src="./img/ryzen7.png" alt="">
+                <div class="descripcion">
+                    <p>AMD Ryzen 7 5800X 3.8GHz </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">169,99€</p>
+                    <p class="precioAntes">545€
+                    </p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,8/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">3241 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 6 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="descuento">
+                    <p>-21%</p>
+                </div>
+                <img src="./img/torrePC.jpg" alt="">
+                <div class="descripcion">
+                    <p>Ordenador Sobremesa PcCom Ready Intel Core i5-12400F / 32GB / 1TB SSD / RTX4060</p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">849,99€</p>
+                    <p class="precioAntes">1024,99€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,7/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">590 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 8 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="descuento">
+                    <p>-33%</p>
+                </div>
+                <img src="./img/tecladoBlanco.png" alt="">
+                <div class="descripcion">
+                    <p>Newskill Serike V2 TKL Teclado Mecánico Gaming RGB Blanco NewSwitch Red </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">59,95€</p>
+                    <p class="precioAntes">89,95€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,7/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">333 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 3 días.</p>
+                </div>
+            </div>
+        </section>
+        <section class="beneficios">
+            <div class="conjuntoBeneficios">
+                <div class="beneficio">
+                    <a href="https://help.pccomponentes.com/hc/es-es/articles/19504957135517-Promoci%C3%B3n-de-env%C3%ADo-gratuito"
+                        class="icon"><span class="material-symbols-outlined">delivery_truck_speed</span></a>
+                    <p>Envios gratuitos en pedidos superiores a 50€</p>
+                </div>
+                <div class="beneficio">
+                    <a href="https://help.pccomponentes.com/hc/es-es/articles/21624280186397-Devolver-un-producto"
+                        class="icon"><span class="material-symbols-outlined">event_repeat</span></a>
+                    <p>Devoluciones hasta 15 días despues</p>
+                </div>
+                <div class="beneficio">
+                    <a href="https://help.pccomponentes.com/hc/es-es/articles/19504278450461-Plazos-de-entrega"
+                        class="icon"><span class="material-symbols-outlined">package_2</span></a>
+                    <p>Recibe tu pedido en 24 horas</p>
+                </div>
+                <div class="beneficio">
+                    <a href="https://help.pccomponentes.com/hc/es-es/categories/19806195784221-garantias-y-devoluciones"
+                        class="icon"><span class="material-symbols-outlined">calendar_clock</span></a>
+                    <p>Devoluciones gratuitas</p>
+                </div>
+                <div class="beneficio">
+                    <a href="https://www.pccomponentes.com/promociones" class="icon"><span
+                            class="material-symbols-outlined">savings</span></a>
+                    <p>Garantia de solución y sustitución en 24h</p>
+                </div>
+                <div class="beneficio">
+                    <a href="https://help.pccomponentes.com/hc/es-es/categories/19806195784221-garantias-y-devoluciones"
+                        class="icon"><span class="material-symbols-outlined">alarm_on</span></a>
+                    <p>Promociones</p>
+                </div>
+                <div class="beneficio">
+                    <a href="https://www.pccomponentes.com/servicios" class="icon"><span
+                            class="material-symbols-outlined">contact_phone</span></a>
+                    <p>Servicios</p>
+                </div>
+            </div>
+        </section>
+        <div class="enunciado">
+            <h4>Descubre lo mejor de nuestra tienda.</h4>
+        </div>
+        <section class="productos2">
+            <div class="producto">
+                <img id="ofertas" src="./img/gpuASUS.png" alt="">
+                <div class="descripcion">
+                    <p>ASUS Dual GeForce RTX 4060 EVO OC Edition 8GB GDDR6 DLSS3</p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">304,99€</p>
+                    <p class="precioAntes">349€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,7/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">369 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 2 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="./img/portatilHP.png" alt="">
+                <div class="descripcion">
+                    <p>HP 15-FD0079NS Intel Core i5-1334U/16GB/1TB SSD/15.6" </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">489,00€</p>
+                    <p class="precioAntes">599,00€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,6/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">740 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 2 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="./img/retonLogitech.png" alt="">
+                <div class="descripcion">
+                    <p>Logitech G502 Lightspeed Ratón Gaming Inalámbrico 25600DPI </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">121,99€</p>
+                    <p class="precioAntes">159,99€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,8/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">984 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 1 día.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="./img/ryzen7.png" alt="">
+                <div class="descripcion">
+                    <p>AMD Ryzen 7 5800X 3.8GHz </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">169,99€</p>
+                    <p class="precioAntes">545€
+                    </p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,8/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">3241 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 6 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="./img/torrePC.jpg" alt="">
+                <div class="descripcion">
+                    <p>Ordenador Sobremesa PcCom Ready Intel Core i5-12400F / 32GB / 1TB SSD / RTX4060</p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">849,99€</p>
+                    <p class="precioAntes">1024,99€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,7/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">590 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 8 días.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="./img/tecladoBlanco.png" alt="">
+                <div class="descripcion">
+                    <p>Newskill Serike V2 TKL Teclado Mecánico Gaming RGB Blanco NewSwitch Red </p>
+                </div>
+                <div class="precio">
+                    <p class="oferta">59,95€</p>
+                    <p class="precioAntes">89,95€</p>
+                </div>
+                <div class="opinion">
+                    <p class="nota">4,7/5</p>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <p class="numOpiniones">333 opiniones.</p>
+                </div>
+                <div class="llegada">
+                    <img title="logoWeb" src="./img/logo_2.png" alt="logo">
+                    <p>Recibelo en 3 días.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="miDiv">
+            <img style="margin-left: 40px;" src="./img/logo_2.png" alt="Logotipo de CIFP Carlos III"
+                style="width: 40px; margin-right: 5px;">
+            <div style="margin-left: 25px;">
+                <p>C/Puerto Pilón, 4, Cartagena 30393</p>
+                <p>Teléfono: <a href="tel: 644 108471">644 10 84 71</a></p>
+                <p>Email: <a href="mailto:4579089@alu.murciaeduca.es">4579089@alu.murciaeduca.es</a></p>
+            </div>
+        </div>
+
+        <div style="margin-right: 300px; margin-left: 300px;">
+            <p><a class="social-link" href="https://cifpcarlos3.es/es/pagina/faq">FAQs</a></p><br>
+            <p><a class="social-link" href="https://cifpcarlos3.es/es/contacto/es/contacto">Contacto</a></p><br>
+            <p><a class="social-link" href="https://cifpcarlos3.es/es/pagina/Buzon-de-sugerencias">Buzón
+                    desugerencias</a></p><br>
+                </div>
+                
+                <div style="margin-right: 20px;">
+                    <p><a class="social-link" href="https://cifpcarlos3.es/es/pagina/prl">PRL</a></p><br>
+                    <p><a class="social-link" href="https://cifpcarlos3.es/es/pagina/Transparencia">Transparencia</a></p><br>
+            <p><a class="social-link" href="https://cifpcarlos3.es/es/pagina/plan-de-evacuacion">Plan de evacuación</a>
+            </p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td><a href="./img/visa.png" target="_blank"><img src="./img/visa.png" alt="visa" style="width: 60px;"></a></td>
+                    <td><a href="./img/masterCard.png" target="_blank"><img src="./img/mastercard.png" alt="mastercard" style="width: 60px;"></a></td>
+                    <td><a href="./img/paypal.png" target="_blank"><img src="./img/paypal.png" alt="paypal" style="width: 60px;"></a></td>
+                    <td><a href="./img/apple-pay.png" target="_blank"><img src="./img/apple-pay.png" alt="paypal" style="width: 60px;"></a></td>
+    
+                </tr>
+            </table>
+        </div>
+        <div style="margin-left: 450px;">
+            <p>
+                <a class="social-link" href="https://cifpcarlos3.es/es/pagina/terminos-y-condiciones">Condiciones de
+                    uso</a> |
+                <a class="social-link"
+                    href="https://cifpcarlos3.es/es/pagina/declaracion-de-accesibilidad">Accesibilidad</a> |
+                <a class="social-link" href="https://cifpcarlos3.es/es/pagina/politica-de-privacidad">Política de
+                    privacidad</a> |
+                <a class="social-link" href="https://cifpcarlos3.es/es/pagina/politica-de-cookies">Cookies</a> |
+                <a class="social-link" href="https://cifpcarlos3.es/es/pagina/Aviso-legal">Información legal</a> |
+                <a class="social-link" href="mapa.html">Mapa del sitio</a>
+            </p>
+        </div>
+        <div class="mapa" id="zona">
+            <iframe <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1161.0216269854318!2d-1.0471307435088597!3d37.63009428686028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6342a6f4b5015d%3A0x6033930461cf06df!2sC.%20Puerto%20Pil%C3%B3n%2C%206%2C%2030393%20Cartagena%2C%20Murcia!5e0!3m2!1ses!2ses!4v1733187596874!5m2!1ses!2ses"
+                width="100%" height="200px" style="border:0;" allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </footer>
+
+    <div class="botones">
+        <div class="botonIdioma">
+            <a href="en_index.html"><img src="./img/idioma2.png" alt="idioma"></a>
+        </div>
+        <div class="botonInicio">
+            <a href="#inicio" class="scroll-button"><span id="subir" class="material-symbols-outlined">keyboard_double_arrow_up</span></a>
+        </div>
+    </div>
+
+    <aside>
+        <div class="publi">
+            <a href="https://media1.tenor.com/m/6QAKoGz-gRMAAAAC/its-cyber-monday-dog.gif"><img src="./img/anuncio.png" alt="anuncio"></a>
+        </div>
+    </aside>
+</body>
+
+</html>

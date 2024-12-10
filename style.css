@@ -1,0 +1,1078 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap");
+
+/*------------PAGINA PRINCIPAL-------------*/
+/* MENU*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", "Montserrat Alternates", sans-serif;
+}
+
+/* Estilos generales */
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el encabezado */
+.contenedor-header {
+    background: #212324;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: auto;
+    margin: auto;
+    display: flex;
+    height: 110px;
+    justify-content: space-between; /*Hace que haya espacio entre los objetos*/
+    align-items: center;
+    padding: 15px 120px;
+}
+
+.contenedor-header .logo {
+    padding: 0;
+}
+
+.contenedor-header .logo img {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+/*MENU DESPLEGABLE*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*Alinea los objetos al centro*/
+    gap: 15px;
+}
+
+.btn-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-menu label {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn-menu h4 {
+    margin-top: 3px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo de los enlaces del menú */
+.container .menu a {
+    display: inline-block; /*Hace que el texto se vea como un bloque*/
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.container .menu a:hover {
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+
+/* Contenedor principal del buscador */
+.buscador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    border: 1px solid #128dd9;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+}
+
+/* Estilo de las categorías */
+.buscador .categorias select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    padding: 5px;
+    outline: none;
+    cursor: pointer; /*Cambia el cursor al situarse encima*/
+}
+
+.buscador .categorias {
+    display: flex;
+    align-items: center;
+    border: 1px solid #128dd9;
+    position: relative;
+    width: 55%;
+    height: 100%;
+}
+
+.buscador .buscar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #128dd9;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo de la caja de texto */
+/*Clase referenciada a elemento input de tipo text*/
+.buscador input[type="text"] {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #333;
+    background-color: #f1f1f1;
+}
+
+.buscador i {
+    position: absolute; /*Posiciona el elemento*/
+    right: 10px; /*Posiciona a la derecha*/
+    font-size: 18px;
+    color: #128dd9;
+    cursor: pointer;
+}
+
+/* Estilos de los iconos */
+.iconos {
+    display: flex;
+    gap: 25px;
+}
+
+.iconos p {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.carrito,
+.perfil {
+    display: flex; /*Hace que los elementos se vean como bloques*/
+    align-items: center;
+    gap: 5px;
+}
+
+.carrito .icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover; /*Ajusta el elemento para que cubra todo el espacio disponible del contenedor en el que se encuentra*/
+    cursor: pointer;
+}
+
+.perfil .icon-img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover; /*Ajusta el elemento para que cubra todo el espacio disponible del contenedor en el que se encuentra*/
+    cursor: pointer;
+}
+
+.icon-exit {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos del menú lateral */
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 1000px;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease; 
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*Clase referenciada a elemento btn-menu*/
+#btn-menu:checked~.container-menu { 
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Como y donde se encuentra el menu desplegable todo el rato*/
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 1000px;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%); /*Desplaza el contenedor de forma vertical para que se muestre por debajo del botón*/
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.promo {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    padding-left: 130px;
+    background-color: #FFF;
+    align-items: center;
+    gap: 6px;
+    border-top: 2px solid #128dd9;
+    border-bottom: 2px solid #128dd9;
+}
+
+/* INICIO OFERTAS */
+
+.ofertas {
+    align-items: center;
+    height: auto;
+    background-color: #000;
+    padding: 20px 0;
+}
+
+.ofertas .foto {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grupoBloques {
+    margin-top: 20px;
+    margin: 20px 170px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.grupoBloques img {
+    width: 80px;
+    height: 80px;
+}
+
+.grupoBloques h4 {
+    color: #FFF;
+    font-size: 18px;
+}
+
+.bloque2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding: 10px;
+    background-color: #434648;
+    border-radius: 10px;
+}
+
+#azul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding: 10px;
+    background-color: #128dd9;
+    border-radius: 10px;
+}
+
+.grupoBloques>.bloque2:hover,
+.grupoBloques>.bloque1:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    box-shadow: 0px 4px 15px rgba(0, 132, 255, 0.292);
+}
+
+/* INICIO */
+
+.enunciado {
+    font-size: 25px;
+    padding-left: 170px;
+    margin: 80px 0 30px 0;
+    color: #333131;
+}
+
+.productos1,
+.productos2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding: 10px;
+    padding: 0 170px;
+}
+
+.producto:hover {
+    transform: scale(1.05); /*Aumenta el tamaña del elemento*/
+    box-shadow: 0px 4px 15px rgba(0, 132, 255, 0.292);
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 10px;
+    box-shadow: 0px 2px 4px rgba(51, 49, 49, 0.292);
+    ;
+}
+
+.producto img {
+    width: 80%;
+    height: 60%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto .descuento {
+    font-weight: bold;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 18px;
+    color: #FFF;
+    background-color: #128dd9;
+}
+
+.producto .descripcion {
+    background-color: #FFF;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    color: #000;
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.precio .oferta {
+    font-weight: bold;
+    font-size: 22px;
+    color: #128dd9;
+}
+
+.precio .precioAntes {
+    text-decoration: line-through;
+    font-size: 16px;
+    color: #000000;
+}
+
+.producto .opinion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    color: #128dd9;
+}
+
+.producto .opinion .nota {
+    font-size: 14px;
+    color: #000;
+}
+
+.producto .opinion .numOpiniones {
+    font-size: 12px;
+    color: #000;
+}
+
+.producto .llegada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+    color: #128dd9;
+}
+
+.llegada img {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.beneficios {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    /* Incluye el padding dentro del ancho total */
+}
+
+.conjuntoBeneficios {
+    margin: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    /* Espacio igual entre los beneficios */
+    flex-wrap: wrap;
+    /* Permite que los beneficios salten de línea si no caben */
+    gap: 20px;
+    /* Espacio uniforme entre filas */
+    padding: 20px 0;
+    /* Espaciado superior e inferior */
+    background-color: #128dd9;
+}
+
+.beneficio {
+    display: flex;
+    flex-direction: column;
+    /* Coloca el icono encima del texto */
+    align-items: center;
+    justify-content: space-between;
+    /* Distribuye espacio entre el icono y el texto */
+    width: calc(100% / 4 - 20px);
+    /* Divide en 4 columnas con espacio uniforme */
+    max-width: 200px;
+    /* Tamaño máximo del contenedor */
+    min-height: 180px;
+    /* Altura mínima para evitar desalineaciones */
+    text-align: center;
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho */
+}
+
+.beneficio:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 132, 255, 0.292);
+}
+
+.beneficio .icon {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    /* Tamaño del círculo */
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    /* Círculo para el icono */
+    margin-bottom: 10px;
+    /* Espacio entre icono y texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+}
+
+.material-symbols-outlined {
+    font-size: 48px;
+    /* Tamaño del icono */
+    color: #128dd9;
+}
+
+.beneficio p {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+    line-height: 1.4;
+    /* Espaciado entre líneas */
+}
+
+/*FOOTER*/
+footer {
+    margin-top: 30px;
+    background-color: #212324;
+    border-top: 1px solid #1c1c1c;
+    font-weight: bold;
+    color: #1c1c1c;
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 0;
+}
+
+footer img {
+    width: 200px;
+    height: auto;
+}
+
+footer p,
+a {
+    color: #d3d3d3;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-link {
+    margin-right: 16px;
+}
+
+.miDiv {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    width: 20%;
+}
+
+.mapa {
+    width: 100%;
+    height: 5px;
+    margin-top: 20px;
+    border: none;
+    border-color: 2px solid #000;
+}
+table {
+    margin-left: 180PX;
+}
+table td {
+    padding: 10px;
+}
+
+/*BOTONES FUNCIONES*/
+.botonInicio {
+
+    bottom: 20px;
+    /* Espaciado desde la parte inferior */
+    right: 20px;
+    /* Espaciado desde la derecha */
+    background-color: #212324;
+    /* Color del botón */
+    border-radius: 50%;
+    /* Botón redondo */
+    width: 50px;
+    /* Ancho del botón */
+    height: 50px;
+    /* Alto del botón */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+}
+
+/* Contenedor de los botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    /* Apilar los elementos verticalmente */
+    gap: 10px;
+    /* Espacio entre los botones */
+    align-items: center;
+    /* Centrar los botones en el eje horizontal */
+    position: fixed;
+    /* Fijar los botones en la pantalla */
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Estilos del botón de idioma */
+.botonIdioma img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Estilos del botón de inicio */
+.botonInicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonInicio a {
+    font-size: 24px;
+}
+
+/*PUBLICIDAD*/
+aside {
+    width: 10%;
+    position: fixed;
+    left: 0;
+    /* Fija el elemento al lado izquierdo */
+    top: 50%;
+    /* Coloca el elemento en la mitad de la altura */
+    transform: translateY(-50%);
+    /* Ajusta para centrar verticalmente */
+    margin-left: 20px;
+}
+
+.publi img {
+    max-width: 100%;
+    /* Asegura que la imagen no se salga de los límites */
+    height: auto;
+    padding: 0%;
+    margin: 0%;
+}
+
+/*------------SOBRE NOSOTROS-------------*/
+/*PANTALLA INICIAL*/
+.fondo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fondo img {
+    width: 100%;
+    height: 100%;
+}
+
+.titulo {
+    background-color: #2123246e;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 48px;
+}
+
+/*EXPLICACIÓN DE NOSOTROS*/
+.quienSomos,
+.misionVision,
+.valores {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quienSomos h2,
+.misionVision h2,
+.valores h2 {
+    margin: 60px 0;
+    font-size: 3rem;
+}
+
+.infoNuestra,
+.mision,
+.vision {
+    text-align: justify;
+    font-size: 1.5rem;
+    width: 40%;
+}
+
+.valores ul {
+    text-align: justify;
+    font-size: 1.5rem;
+    width: 40%;
+}
+
+.valores li {
+    margin-bottom: 30px;
+}
+
+.mision {
+    margin-bottom: 60px;
+}
+
+.gif {
+    margin: 100px 0 0 0;
+    background-color: #128dd9;
+}
+
+/*FORMULARIO UNIRSE AL EQUIPO*/
+.uneteAlEquipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #128dd9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.uneteAlEquipo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.uneteAlEquipo .condicion {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.uneteAlEquipo .formulario {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="file"],
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario textarea {
+    resize: none;
+    height: 100px;
+}
+
+.formulario button {
+    background-color: #128dd9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #0a6ca8;
+}
+
+.formulario select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.formulario .email,
+.formulario .name,
+.formulario .lastname,
+.formulario .telefono,
+.formulario .direccion,
+.formulario .provincia,
+.formulario .presentacion,
+.formulario .cv {
+    margin-bottom: 20px;
+}
+
+.formulario .cv {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input[type="file"] {
+    border: none;
+    padding: 5px;
+}
+
+.formulario .presentacion textarea {
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    .uneteAlEquipo .formulario {
+        padding: 15px;
+    }
+
+    .uneteAlEquipo h2 {
+        font-size: 2rem;
+    }
+
+    .formulario input[type="text"],
+    .formulario input[type="email"],
+    .formulario input[type="file"],
+    .formulario select,
+    .formulario textarea {
+        font-size: 0.9rem;
+    }
+
+    .formulario button {
+        font-size: 0.9rem;
+    }
+}
+
+.accesoCV {
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.accesoCV a {
+    color: #000000;
+}
+
+.accesoCV a:hover {
+    color: #00000072;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/*CURRICULUM INDEX*/
+.cabezera {
+    margin-bottom: 60px;
+    background-color: #212324;
+    text-align: center;
+    align-items: center;
+    border-bottom: 4px solid #3498db;
+    border-radius: 0 0 10px 10px;
+}
+
+.cabezera h2 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+/* Contenedor general */
+#CV {
+    position: relative; /* Necesario para que el perfil tenga como referencia este contenedor */
+    display: grid;
+    grid-template-rows: auto 1fr; /* Dividimos en dos: cabecera y contenido */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Eliminamos el fondo del perfil */
+.perfil2 {
+    position: absolute; /* Posicionamos la imagen dentro del #CV */
+    top: -60px; /* Subimos la imagen para que quede fuera del contenedor */
+    right: 20px; /* Pegamos a la esquina derecha */
+    text-align: center;
+    z-index: 10; /* Aseguramos que esté por encima del contenido */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Imagen más grande y con bordes visibles */
+
+.perfil2 img {
+    margin-top: 280px;
+    margin-right: 330px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estado al hacer clic en el checkbox */
+#toggle-image:checked + label img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: #2271b3;
+    transform: scale(1.1);
+}
+
+/* Contenedor para las columnas */
+.columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px;
+    padding: 20px;
+    position: relative; /* Aseguramos que las columnas respeten su espacio */
+}
+
+/* Estilo para las secciones individuales */
+.izquierda,
+.derecha {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f0f0f0;
+    border-left: 5px solid #3498db;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #2271b3;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+}
+/* Barras de Loading */
+.loading-wave {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-bar {
+    width: 20px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #3498db;
+    border-radius: 5px;
+    animation: loading-wave-animation 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loading-bar:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loading-bar:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@keyframes loading-wave-animation {
+    0%,
+    100% {
+        height: 10px;
+    }
+
+    50% {
+        height: 50px;
+    }
+}
+
+
